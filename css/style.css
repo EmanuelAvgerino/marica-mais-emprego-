@@ -132,7 +132,6 @@ input {
 form [type="submit"]{
     display: flex;
     justify-content: center;
-    paddig-left:8rem;
     background-color: #7dc9e2;
     color: rgb(49, 49, 49);
     font-weight: bold;
