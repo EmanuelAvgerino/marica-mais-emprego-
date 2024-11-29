@@ -1,34 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
 header {
-    
     display: flex;
     justify-content: center;
     background-color: white;
-    color:  #68779E;
+    color: #68779E;
     padding: 1rem;
     font-family: "Montserrat";
     font-weight: 500;
-    
 }
 
-header > div{
-
+header > div {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    
-    
 }
-.logo{
-  
-    display:flex;
-    justify-content:flex-start;
-    padding-left: 13rem;
-    
 
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 13rem;
 }
 
 .menu {
@@ -37,13 +28,10 @@ header > div{
     list-style: none;
     padding-left: 4.5rem;
     padding-top: 0.4em;
-
-   
 }
 
 .menu li {
     margin: 0 13px;
-    
 }
 
 .menu a {
@@ -57,64 +45,62 @@ header > div{
 }
 
 .descricao {
-   
-    
     width: 100%;
-    
 }
 
-.texto{
-
+.texto {
     display: flex;
     justify-content: center;
-    background-color:#ffffff;
+    background-color: #ffffff;
     color: #35394A;
     background-image: url(../img/Montagem_Ilustracao_Prefeitura-de-Marica-1.png);
     font-weight: 500;
     padding-left: 2em;
-    padding-top:3em ;
+    padding-top: 3em;
     padding-bottom: 3em;
     padding-right: 3em;
     width: 100%;
     text-align: left;
 }
 
-#textoUm{
+#textoUm {
+    text-align: justify;
     font-family: 'Montserrat';
     font-size: 30px;
-    padding-right:1em ;
-    
+    padding-right: 1em;
 }
 
-#textoDois{
-
+#textoDois {
+    text-align: justify;
     font-family: 'Montserrat';
     font-size: 30px;
-    
 }
-#cadastreSe{
+
+#cadastreSe {
     display: flex;
     justify-content: center;
     background-color: #EEE3FF;
-    padding-top:1em;
-    font-size: 3rem;    
+    padding-top: 1em;
+    font-size: 3rem;
     font-family: "Montserrat";
-    color:#35394A;
+    color: #35394A;
     background-image: url;
-
 }
 
-.formulario{
-    display:flex;
+.formulario {
+    display: flex;
+    text-align: left;
     justify-content: center;
     background-color: #EEE3FF;
     padding-top: 2rem;
     padding-bottom: 3rem;
-    }
+}
+
 form {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    align-items: center;
+    width: 100%;
     font-size: 14px;
     color: rgb(49, 49, 49);
     font-family: "Epilogue";
@@ -129,7 +115,7 @@ input {
     margin-bottom: 10px;
 }
 
-form [type="submit"]{
+form [type="submit"] {
     display: flex;
     justify-content: center;
     background-color: #7dc9e2;
@@ -140,15 +126,13 @@ form [type="submit"]{
     height: 35px;
     width: 70px;
     border: 0;
-    
-
 }
 
-form [type="submit"]:hover{
+form [type="submit"]:hover {
     cursor: pointer;
 }
 
-input:focus{
+input:focus {
     border-color: #7dc9e2;
     outline: none;
 }
@@ -157,30 +141,149 @@ input:focus{
     display: flex;
     justify-content: center;
     font-family: "Montserrat";
-    font-size:2.5rem;
+    font-size: 2.5rem;
     padding-top: 1em;
-    color:#35394A
-    ;
+    color: #35394A;
 }
-#imagensEmpresas{
 
-    display:grid;
+#imagensEmpresas {
+    display: grid;
     grid-template-columns: 25% 25% 25%;
     justify-items: center;
     justify-content: space-around;
     gap: 3px;
     padding-top: 5rem;
     padding-bottom: 6rem;
-   
 }
 
 footer {
     background-color: #7dc9e2;
     color: rgb(49, 49, 49);
     text-align: center;
-    padding: 1.2rem ;
+    padding: 1.2rem;
     position: relative;
     bottom: 0;
     width: 100%;
     font-family: "Montserrat";
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        padding-left: 3%; 
+    }
+
+    .logo img {
+        width: 50%;
+        height: auto;
+    }
+
+    .menu {
+        flex-direction: row; 
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+
+    .menu li {
+        margin: 10px 5px; 
+    }
+
+    #textoUm, #textoDois {
+        font-size: 18px; 
+        padding-right: 0.5em;
+    }
+
+    #cadastreSe {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .formulario {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    form {
+        width: 90%; 
+    }
+
+    #imagensEmpresas {
+        padding-top: 2rem;
+    }
+
+    #imagensEmpresas img {
+        width: 120%;
+        height: auto;
+    }
+
+    #empresas {
+        font-size: 2rem; 
+    }
+
+    footer {
+        font-size: 23px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; 
+        padding: 1rem; 
+    }
+
+    .logo {
+        padding-left: 0;
+        display: block;
+        width: 30%; 
+    }
+
+    .logo img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px; 
+        justify-content: flex-end; 
+        flex-grow: 1; 
+        padding: 0;
+    }
+
+    .menu li {
+        margin: 0 5px; 
+    }
+
+    .menu a {
+        color: #68779E;
+        text-decoration: none;
+        font-size: 12px; 
+    }
+
+    #textoUm, #textoDois {
+        font-size: 12px; 
+    }
+
+    #imagensEmpresas {
+        grid-template-columns: 1fr; 
+        padding-top: 2rem;
+    }
+
+    #cadastreSe {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    #imagensEmpresas img {
+        width: 80%;
+        height: auto;
+    }
+
+    footer {
+        font-size: 10px;
+    }
 }
