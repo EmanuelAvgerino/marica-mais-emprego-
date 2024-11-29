@@ -8,6 +8,7 @@ header {
     padding: 1rem;
     font-family: "Montserrat";
     font-weight: 500;
+    heigth: 70px;
 }
 
 header > div {
@@ -28,6 +29,7 @@ header > div {
     list-style: none;
     padding-left: 4.5rem;
     padding-top: 0.4em;
+    width: 32rem;
 }
 
 #menu li {
