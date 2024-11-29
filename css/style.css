@@ -155,6 +155,23 @@ input:focus {
     padding-top: 5rem;
     padding-bottom: 6rem;
 }
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+}
 
 footer {
     background-color: #7dc9e2;
