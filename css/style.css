@@ -216,31 +216,34 @@ input:focus {
     color: #35394A;
 }
 
-#imagensEmpresas {
-    display: grid;
-    grid-template-columns: 25% 25% 25%;
-    justify-items: center;
-    justify-content: space-around;
-    gap: 3px;
-    padding-top: 5rem;
-    padding-bottom: 6rem;
-}
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
+#carrossel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease;
+.carrossel-principal {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
-.carousel-images img {
-  width: 100%;
-  height: auto;
+.carrossel-imagem {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+
+.carrossel-imagem img {
+    width: 55%;
+    height: auto;
+}
+
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 footer {
