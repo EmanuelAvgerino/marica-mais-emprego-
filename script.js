@@ -1,20 +1,38 @@
-let slideIndex = 0;
+let slideIndex = 0;  
+let intervalo;       
+function mostrarSlide() {
+    let slides = document.querySelectorAll('.carrossel-imagem'); 
 
-function nextSlide() {
-  const slides = document.querySelectorAll('.carousel-images img');
-  const totalSlides = slides.length;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
 
-  slideIndex++;
+    let container = document.querySelector('.carrossel-principal');
+    container.style.transform = `translateX(-${slideIndex * 100}%)`;
 
-  if (slideIndex >= totalSlides - 2) {
-    slideIndex = 0;
-  }
-
-  const carousel = document.querySelector('.carousel-images');
-  carousel.style.transform = `translateX(-${slideIndex * 33.33}%)`;
 }
 
-setInterval(nextSlide, 3000);
+function mudarSlide() {
+    slideIndex++; 
+    mostrarSlide();  
+}
+
+function playCarrossel() {
+    intervalo = setInterval(mudarSlide, 1500);  
+}
+
+function pauseCarrossel() {
+    clearInterval(intervalo); 
+}
+
+playCarrossel();
+
+let carrosselElement = document.getElementById("carrossel");
+carrosselElement.addEventListener("mouseover", pauseCarrossel); 
+carrosselElement.addEventListener("mouseout", playCarrossel);  
 
 const btnMobile = document.getElementById('btn-mobile');
 
