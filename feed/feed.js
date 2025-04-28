@@ -1,4 +1,3 @@
-// Função para buscar usuários da API
 async function fetchUsuarios() {
     try {
         const resposta = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -10,10 +9,9 @@ async function fetchUsuarios() {
     }
 }
 
-// Função para mostrar todos os usuários
 function mostrarUsuarios(usuarios) {
     const userList = document.getElementById('userList');
-    userList.innerHTML = ''; // Limpa antes de carregar
+    userList.innerHTML = '';
 
     const favoritos = pegarFavoritos();
 
@@ -40,17 +38,14 @@ function mostrarUsuarios(usuarios) {
     });
 }
 
-// Função para pegar favoritos do localStorage
 function pegarFavoritos() {
     return JSON.parse(localStorage.getItem('favoritos')) || [];
 }
 
-// Função para salvar favoritos no localStorage
 function salvarFavoritos(favoritos) {
     localStorage.setItem('favoritos', JSON.stringify(favoritos));
 }
 
-// Função para adicionar ou remover dos favoritos
 function alternarFavorito(usuario) {
     let favoritos = pegarFavoritos();
 
@@ -63,14 +58,13 @@ function alternarFavorito(usuario) {
     }
 
     salvarFavoritos(favoritos);
-    mostrarUsuariosCarregados(); // Atualiza os botões
+    mostrarUsuariosCarregados();
     mostrarFavoritos();
 }
 
-// Função para mostrar os favoritos
 function mostrarFavoritos() {
     const favoriteList = document.getElementById('favoriteList');
-    favoriteList.innerHTML = ''; // Limpa antes de carregar
+    favoriteList.innerHTML = '';
 
     const favoritos = pegarFavoritos();
 
@@ -89,14 +83,12 @@ function mostrarFavoritos() {
     });
 }
 
-// Função para atualizar a lista usando os usuários já carregados
 let usuariosCarregados = [];
 
 function mostrarUsuariosCarregados() {
     mostrarUsuarios(usuariosCarregados);
 }
 
-// Quando a página carrega
 async function iniciar() {
     try {
         const resposta = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -108,5 +100,4 @@ async function iniciar() {
     }
 }
 
-// Começa tudo
 iniciar();
